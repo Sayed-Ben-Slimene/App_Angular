@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ResidencesComponentComponent } from './residences-component/residences-component.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NotFoundComponent,
     ResidencesComponentComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,34 +1,51 @@
-<p>home works!</p>
+<header class="bg-white shadow">
+     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">Home</h1>
+     </div>
+</header>
+<main>
+     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
 
-<input type="submit" value="click" (click)="home()">
+          <!--     
+               <input type="submit" value="click" (click)="home()">   
+               <div [style.backgroundColor]="color">
+               PropertyBinding
+          </div>
+          -->
+          <input type="text" placeholder="Type here color" class="input input-bordered w-full max-w-xs"
+               [(ngModel)]="color" />
+          <br><br>
+          <div class="#">
+               <table class="table table-zebra">
+                    <thead>
+                         <th [style.backgroundColor]="color">ID</th>
+                         <th [style.backgroundColor]="color">Title</th>
+                         <th [style.backgroundColor]="color">Price</th>
+                         <th [style.backgroundColor]="color">Quantity</th>
+                         <th [style.backgroundColor]="color">Like</th>
+                         <th [style.backgroundColor]="color">Add Like</th>
+                         <th [style.backgroundColor]="color">Buy</th>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let i of products ; let idx=index " class="bg-base-50 hover">
 
-<div [style.backgroundColor]="color">
-     propertyBinding
-</div>
+                              <ng-container *ngIf="i.price > price || price==null">
+                                   <th>{{i.id}}</th>
+                                   <td>{{i.title}}</td>
+                                   <td>{{i.price}}</td>
+                                   <td>{{i.quantity}}</td>
+                                   <td>{{i.like}}</td>
+                                   <td><button class="btn btn-outline btn-primary" (click)="incrime(idx)">Like</button>
+                                   </td>
+                                   <td><button class="btn btn-outline btn-accent" [disabled]="i.quantity==0"
+                                             (click)="buy(idx)">buy</button></td>
 
-<input type="text" placeholder="enter color" [(ngModel)]="color">
-
-<table class="table" [border]="2">
-     <th scope="col">ID</th>
-     <th>title</th>
-     <th>price</th>
-     <th>quantity</th>
-     <th>like</th>
-     <th>button</th>
-     <th></th>
-
-     <tr *ngFor="let i of products ; let idx=index ">
-
-          <ng-container *ngIf="i.price > price || price==null">
-               <td class="table-primary">{{i.id}}</td>
-               <td class="table-primary">{{i.title}}</td>
-               <td class="table-primary">{{i.price}}</td>
-               <td class="table-primary">{{i.quantity}}</td>
-               <td>{{i.like}}</td>
-               <td><button class="btn btn-primary" (click)="incrime(idx)">Like</button></td>
-               <td><button [disabled]="i.quantity==0" (click)="buy(idx)">buy</button></td>
-
-          </ng-container>
-     </tr>
-</table>
-<input type="text" placeholder="select " [(ngModel)]="price">
+                              </ng-container>
+                         </tr>
+                    </tbody>
+               </table>
+          </div>
+          <input type="text" placeholder="Type here Filter Price" class="input input-bordered w-full max-w-xs"
+               [(ngModel)]="price">
+     </div>
+</main>

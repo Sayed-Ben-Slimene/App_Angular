@@ -1,40 +1,54 @@
-<p>residences-component works!</p>
+<header class="bg-white shadow">
+     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">Residences</h1>
+     </div>
+</header>
+<main>
+     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+          <div class="overflow-x-auto">
 
-<table class="table" [border]="2">
-     <th>ID</th>
-     <th>Name</th>
-     <th>Addr</th>
-     <th>Image</th>
-     <tr *ngFor="let i of listResidences ; let A=index ">
-          <td>{{i.id}}</td>
-          <td>{{i.name}}</td>
-          <td>{{i.address}}</td>
-          <td>{{i.image}}</td>
-          <td><button class="btn btn-primary" (click)="app(A)">Show Apartement</button></td>
+               <table class="table" [border]="2">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Addr</th>
+                    <th>Image</th>
+                    <tr *ngFor="let i of listResidences ; let A=index ">
+                         <td>{{i.id}}</td>
+                         <td>{{i.name}}</td>
+                         <td>{{i.address}}</td>
+                         <td>{{i.image}}</td>
+                         <td><button class="btn btn-primary" (click)="app(A)">Show Apartement</button></td>
 
-     </tr>
-</table>
+                    </tr>
+               </table>
+          </div>
+          <div class="overflow-x-auto">
 
-<table class="table">
-     <th>ID</th>
-     <th>appartNum</th>
-     <th>floorNum</th>
-     <th>Image</th>
-     <th>surface</th>
-     <th>terrace</th>
-     <th>surfaceTerrace</th>
-     <th>category</th>
-     <th>description</th>
-     <tr *ngFor="let i of list ">
+               <table class="table">
+                    <th>ID</th>
+                    <th>appartNum</th>
+                    <th>floorNum</th>
+                    <th>Image</th>
+                    <th>surface</th>
+                    <th>terrace</th>
+                    <th>surfaceTerrace</th>
+                    <th>category</th>
+                    <th>description</th>
+                    <tr *ngFor="let i of list " class="hover">
 
-          <td>{{i.id}}</td>
-          <td>{{i.appartNum}}</td>
-          <td>{{i.floorNum}}</td>
-          <td>{{i.surface}}</td>
-          <td>{{i.terrace}}</td>
-          <td>{{i.surfaceTerrace}}</td>
-          <td>{{i.category}}</td>
-          <td>{{i.description}}</td>
+                         <td>{{i.id}}</td>
+                         <td>{{i.appartNum}}</td>
+                         <td>{{i.floorNum}}</td>
+                         <td>{{i.surface}}</td>
+                         <td>{{i.terrace}}</td>
+                         <td>{{i.surfaceTerrace}}</td>
+                         <td>{{i.category}}</td>
+                         <td>{{i.description}}</td>
 
-     </tr>
-</table>
+                    </tr>
+               </table>
+          </div>
+
+     </div>
+
+</main>

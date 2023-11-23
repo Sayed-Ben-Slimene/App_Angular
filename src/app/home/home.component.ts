@@ -20,7 +20,7 @@ export class HomeComponent {
   buy(i: number) {
     this.products[i].quantity--;
   }
-  color = "red";
+  color = "gray";
   products: Product[] = [{ id: 1, title: 'product1', price: 20, quantity: 20, like: 10 }, { id: 2, title: 'product2', price: 50, quantity: 20, like: 10 }, { id: 3, title: 'product3', price: 20, quantity: 20, like: 20 }]
 
 
