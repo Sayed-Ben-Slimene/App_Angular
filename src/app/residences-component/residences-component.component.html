@@ -1,0 +1,40 @@
+<p>residences-component works!</p>
+
+<table class="table" [border]="2">
+     <th>ID</th>
+     <th>Name</th>
+     <th>Addr</th>
+     <th>Image</th>
+     <tr *ngFor="let i of listResidences ; let A=index ">
+          <td>{{i.id}}</td>
+          <td>{{i.name}}</td>
+          <td>{{i.address}}</td>
+          <td>{{i.image}}</td>
+          <td><button class="btn btn-primary" (click)="app(A)">Show Apartement</button></td>
+
+     </tr>
+</table>
+
+<table class="table">
+     <th>ID</th>
+     <th>appartNum</th>
+     <th>floorNum</th>
+     <th>Image</th>
+     <th>surface</th>
+     <th>terrace</th>
+     <th>surfaceTerrace</th>
+     <th>category</th>
+     <th>description</th>
+     <tr *ngFor="let i of list ">
+
+          <td>{{i.id}}</td>
+          <td>{{i.appartNum}}</td>
+          <td>{{i.floorNum}}</td>
+          <td>{{i.surface}}</td>
+          <td>{{i.terrace}}</td>
+          <td>{{i.surfaceTerrace}}</td>
+          <td>{{i.category}}</td>
+          <td>{{i.description}}</td>
+
+     </tr>
+</table>

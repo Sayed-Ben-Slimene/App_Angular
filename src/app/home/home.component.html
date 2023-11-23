@@ -1,0 +1,34 @@
+<p>home works!</p>
+
+<input type="submit" value="click" (click)="home()">
+
+<div [style.backgroundColor]="color">
+     propertyBinding
+</div>
+
+<input type="text" placeholder="enter color" [(ngModel)]="color">
+
+<table class="table" [border]="2">
+     <th scope="col">ID</th>
+     <th>title</th>
+     <th>price</th>
+     <th>quantity</th>
+     <th>like</th>
+     <th>button</th>
+     <th></th>
+
+     <tr *ngFor="let i of products ; let idx=index ">
+
+          <ng-container *ngIf="i.price > price || price==null">
+               <td class="table-primary">{{i.id}}</td>
+               <td class="table-primary">{{i.title}}</td>
+               <td class="table-primary">{{i.price}}</td>
+               <td class="table-primary">{{i.quantity}}</td>
+               <td>{{i.like}}</td>
+               <td><button class="btn btn-primary" (click)="incrime(idx)">Like</button></td>
+               <td><button [disabled]="i.quantity==0" (click)="buy(idx)">buy</button></td>
+
+          </ng-container>
+     </tr>
+</table>
+<input type="text" placeholder="select " [(ngModel)]="price">
