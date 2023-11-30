@@ -1,0 +1,42 @@
+<main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
+     <p>reactive-form works!</p>
+
+     <label>Login</label>
+     <input class="form-control" type="text" placeholder="login" [formControl]="login">
+
+     <label>password</label>
+     <input class="form-control" type="text" placeholder="password" [formControl]="password">
+
+     <input type="submit" value="save" (click)="showLogin()" [disabled]="login.invalid || password.invalid">
+
+     <br>
+     <h1> FormGroup</h1>
+
+     <form [formGroup]="registerForm">
+
+          <label>firstName</label>
+          <input class="form-control" type="text" placeholder="firstName" formControlName="firstName">
+
+          <div class="alert alert-danger"
+               *ngIf="registerForm.controls['firstName'].invalid && registerForm.controls['firstName'].touched">
+               <div *ngIf="registerForm.get('firstName')?.errors?.['required']">
+                    the firstName is a required field
+               </div>
+               <div *ngIf="registerForm.get('firstName')?.errors?.['minlength']">
+                    the firstName minLenght 3
+               </div>
+          </div>
+          <label>LastName</label>
+          <input class="form-control" type="text" placeholder="LastName" formControlName="LastName">
+          <div class="alert alert-danger" *ngIf="registerForm.controls['LastName'].invalid">
+               the lastName is a required field
+          </div>
+          <label>adress</label>
+          <input class="form-control" type="text" placeholder="adress" formControlName="adress">
+          <div class="alert alert-danger" *ngIf="registerForm.controls['adress'].invalid">
+               the adress is a required field
+          </div>
+          <input type="submit" value="save" (click)="showF()" [disabled]="this.registerForm.invalid">
+
+     </form>
+</main>

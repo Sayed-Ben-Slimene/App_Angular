@@ -7,8 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ResidencesComponentComponent } from './residences-component/residences-component.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { DetailProductComponent } from './detail-product/detail-product.component';
+import { ApartmentComponent } from './apartment/apartment.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { FooterComponent } from './shared/footer/footer.component';
     NotFoundComponent,
     ResidencesComponentComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ReactiveFormComponent,
+    DetailProductComponent,
+    ApartmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

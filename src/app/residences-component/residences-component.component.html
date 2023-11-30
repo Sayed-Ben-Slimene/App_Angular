@@ -49,6 +49,20 @@
                </table>
           </div>
 
+
+
+
      </div>
 
+
+     <ul class="list-group" *ngFor="let i of listResidences, let t=index">
+
+          <li class="list-group-item"> {{i.id}} {{i.name}} {{i.address}}
+
+               <img src="{{i.image}}" alt="tet">
+               <button class="btn btn-info" [routerLink]="['/showApparts',i.id]">Show App</button>
+
+          </li>
+
+     </ul>
 </main>
