@@ -12,6 +12,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ApartmentComponent } from './apartment/apartment.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { TvComponent } from './tv/tv.component';
+import { ShowOneProductComponent } from './show-one-product/show-one-product.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ApartmentComponent } from './apartment/apartment.component';
     FooterComponent,
     ReactiveFormComponent,
     DetailProductComponent,
-    ApartmentComponent
+    ApartmentComponent,
+    MobileComponent,
+    TvComponent,
+    ShowOneProductComponent
   ],
   imports: [
     BrowserModule,

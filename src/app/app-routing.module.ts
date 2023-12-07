@@ -6,6 +6,9 @@ import { ResidencesComponentComponent } from './residences-component/residences-
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
+import { TvComponent } from './tv/tv.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { ApartmentComponent } from './apartment/apartment.component';
 
 
 const routes: Routes = [
@@ -16,6 +19,11 @@ const routes: Routes = [
   { path: 'Forms', component: ReactiveFormComponent },
   { path: 'product/:id', component: DetailProductComponent },
   { path: 'Residence', component: ResidencesComponentComponent },
+  { path: 'product', component: HomeComponent },
+
+  { path: 'showApparts/:id', component: ApartmentComponent },
+  { path: 'tv', component: TvComponent },
+  { path: 'mobile', component: MobileComponent },
   { path: '**', component: NotFoundComponent },
 
 

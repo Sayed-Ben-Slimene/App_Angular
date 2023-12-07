@@ -4,6 +4,7 @@ export class Product {
      quantity!: number
      price!: number
      like!: number
+     image!: string
 
 
 }

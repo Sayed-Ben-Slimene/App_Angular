@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Product } from '../model/Product';
 
 @Component({
@@ -7,6 +7,19 @@ import { Product } from '../model/Product';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  title: string = "welcome 4SAE5"
+  @Output() notif = new EventEmitter()
+  color = "";
+  price: number = 5;
+  listproducts: Product[] = [
+    { id: 1, title: 'produit1', price: 20, quantity: 10, like: 0, image: "" },
+    { id: 2, title: 'produit2', price: 5, quantity: 0, like: 52, image: "" },
+    { id: 3, title: 'produit3', price: 10, quantity: 20, like: 5, image: "" }
+  ]
+
+  sendDataToFather() {
+    this.notif.emit('bonjour');
+  }
 
   home() {
 
@@ -15,16 +28,11 @@ export class HomeComponent {
 
 
   incrime(i: number) {
-    this.products[i].like++;
+    this.listproducts[i].like++;
   }
   buy(i: number) {
-    this.products[i].quantity--;
+    this.listproducts[i].quantity--;
   }
-  color = "gray";
-  products: Product[] = [{ id: 1, title: 'product1', price: 20, quantity: 20, like: 10 }, { id: 2, title: 'product2', price: 50, quantity: 20, like: 10 }, { id: 3, title: 'product3', price: 20, quantity: 20, like: 20 }]
-
-
-  price !: number;
 
 
 

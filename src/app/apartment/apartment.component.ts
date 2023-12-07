@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Residence } from '../model/Residence';
 import { Apartment } from '../model/Apartment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-apartment',
@@ -8,7 +9,7 @@ import { Apartment } from '../model/Apartment';
   styleUrls: ['./apartment.component.css']
 })
 export class ApartmentComponent {
-  list: ApartmentComponent[] = []
+  list: Apartment[] = []
   listResidences: Residence[] = [
     {
       id: 1, "name": "El fel", "address": "Borj Cedria",

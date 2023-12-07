@@ -27,7 +27,7 @@
                          <th [style.backgroundColor]="color">Buy</th>
                     </thead>
                     <tbody>
-                         <tr *ngFor="let i of products ; let idx=index " class="bg-base-50 hover">
+                         <tr *ngFor="let i of listproducts ; let idx=index " class="bg-base-50 hover">
 
                               <ng-container *ngIf="i.price > price || price==null">
                                    <th>{{i.id}}</th>
@@ -39,6 +39,7 @@
                                    </td>
                                    <td><button class="btn btn-outline btn-accent" [disabled]="i.quantity==0"
                                              (click)="buy(idx)">buy</button></td>
+                                   <button class="btn btn-succes" [routerLink]="['/product',i.id]"> detail</button>
 
                               </ng-container>
                          </tr>
